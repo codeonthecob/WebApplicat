@@ -1,0 +1,452 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alan Cravey</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="~/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="~/css/colorbox.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300,600,400italic&subset=latin,cyrillic' rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" href="~/css/main.css">
+		<link rel="stylesheet" href="~/css/font-awesome.min.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="~/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand goTop" href="#">Alan</a>
+					<div class="nav-collapse pull-right">
+						<ul class="nav">
+						    <li class="active"><a href="@Url.Action("Home", "Home")">Home</a></li>
+                            <li class="active"><a href="@Url.Action("Blog", "Home")">Blog</a></li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages  <b class="caret"></b></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="price.html">Price</a></li>
+									<li><a href="login.html">Login</a></li>
+									<li><a href="register.html">Register</a></li>
+									<li><a href="faq.html">F.A.Q.</a></li>
+									<li><a href="contacts.html">Contact</a></li>
+								</ul>
+							</li>
+						    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="blog-right.html">Blog right sidebar</a></li>
+									<li><a href="blog-left.html">Blog left sidebar</a></li>
+									<li><a href="blog-full.html">Blog full</a></li>
+									<li class="divider"></li>
+									<li><a href="blog-single.html">Blog single one</a></li>
+									<li><a href="blog-single2.html">Blog single two</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="works.html">Simple gallery</a></li>
+									<li><a href="works2.html">With text</a></li>
+									<li><a href="works3.html">With filter</a></li>
+									<li class="divider"></li>
+									<li><a href="works-single.html">Single project</a></li>
+								</ul>
+							</li>
+							<li><a href="shortcodes.html">Shortcodes</a>
+							</li>
+						</ul>
+					</div>	
+				</div>	
+			</div>
+		</div>
+		<div id="welcome" class="parallax large-view" style="background-image: url(../../images/bg1.jpg); ">
+			<div class="text logotext">
+				<h1 style="text-shadow: 2px 2px 1px gray">Alan Cravey</h1>
+				<p style="text-shadow: 1px 1px 1px gray">Personal Development Portfolio</p>
+			</div>
+		</div>
+
+		<section class="text-block">
+			<div class="features text-center dark-bg">
+				<div class="container">
+					<div class="row-fluid">
+						<article class="span3">
+							<i class="icon-resize-full"></i>
+							<h3 class="with-border">Full Responsive</h3>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora. </p>
+							<a class="btn">Read more</a>
+						</article>
+						<article class="span3">
+							<i class="icon-magic"></i>
+							<h3 class="with-border">Parallax Effect</h3>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora. </p>
+							<a class="btn">Read more</a>
+						</article>
+						<article class="span3">
+							<i class="icon-thumbs-up"></i>
+							<h3 class="with-border">Modern Design</h3>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora. </p>
+							<a class="btn">Read more</a>
+						</article>
+						<article class="span3">
+							<i class="icon-cogs"></i>
+							<h3 class="with-border">Easy Customizable</h3>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora. </p>
+							<a class="btn">Read more</a>
+						</article>
+					</div>
+				</div>	
+			</div>	
+			<div class="light-bg">
+				<div class="container">
+					<h2 class="with-border">Latest Projects</h2>
+					<ul class="thumbnails">
+						<li class="span4">
+							<div class="thumbnail">
+								<div class="img-wrap">
+									<a href="~/images/bg4.jpg" class="colorbox">
+										<div class="black-bg">
+											<i class="icon-zoom-in"></i>
+										</div>
+										<img src="~/images/bg4.jpg" alt="" rel="gal"/>
+									</a>
+								</div>	
+								<a href="#">
+									<h3 class="with-border color">Work place</h3>
+									<p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis. Consectetur sed congue vel, sollicitudin eget odio. Neque porro quisquam est, adipisci velit, sed quia non numquam eius modi tempora.</p>
+								</a>
+							</div>	
+						</li>
+						<li class="span4">
+							<div class="thumbnail">
+								<div class="img-wrap">
+									<a href="~/images/image_4.jpg" class="colorbox">
+										<div class="black-bg">
+											<i class="icon-zoom-in"></i>
+										</div>	
+										<img src="~/images/image_4.jpg" alt="" rel="gal"/>
+									</a>
+								</div>
+								<a href="#">
+									<h3 class="with-border color">Summer day</h3>
+									<p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis. Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
+								</a>
+							</div>	
+						</li>
+						<li class="span4">
+							<div class="thumbnail">
+								<div class="img-wrap">
+									<a href="~/images/image_2.jpg" class="colorbox">
+									    <div class="black-bg">
+									<a href="~/images/image_2.jpg" class="colorbox"><i class="icon-zoom-in"></i></a>
+									
+									    </div>	
+									<img src="~/images/image_2.jpg" alt="" rel="gal"/>
+									</a>
+								</div>
+								<a href="#">
+									<h3 class="with-border color">Good morning</h3>
+									<p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
+								</a>
+							</div>	
+						</li>
+					</ul>	
+				</div>
+			</div>	
+<!--
+			<div class="dark-bg">	
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span6">
+							<h2 class="with-border">Why choose us?</h2>
+							<div id="accordion" class="section">
+								<div class="accordion-group">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											<i class="icon-resize-full"></i> Full Responsive
+										</a>
+									</div>
+									<div id="collapseOne" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. Pellentesque diam ante, egestas at suscipit vel, aliquam sit amet massa. Suspendisse placerat purus at lacus dictum, ut dapibus mauris accumsan. Nullam malesuada turpis mollis, condimentum dolor nec, ornare odio.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+											<i class="icon-magic"></i> Parallax Effect
+										</a>
+									</div>
+									<div id="collapseTwo" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. Pellentesque diam ante, egestas at suscipit vel, aliquam sit amet massa. Suspendisse placerat purus at lacus dictum, ut dapibus mauris accumsan. Nullam malesuada turpis mollis, condimentum dolor nec, ornare odio.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+											<i class="icon-thumbs-up"></i> Modern Design
+										</a>
+									</div>
+									<div id="collapseThree" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. Pellentesque diam ante, egestas at suscipit vel, aliquam sit amet massa. Suspendisse placerat purus at lacus dictum, ut dapibus mauris accumsan. Nullam malesuada turpis mollis, condimentum dolor nec, ornare odio.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+											<i class="icon-cogs"></i> Easy Customizable
+										</a>
+									</div>
+									<div id="collapseFour" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. Pellentesque diam ante, egestas at suscipit vel, aliquam sit amet massa. Suspendisse placerat purus at lacus dictum, ut dapibus mauris accumsan. Nullam malesuada turpis mollis, condimentum dolor nec, ornare odio.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+-->
+<!--
+						<div class="span6">
+							<h2 class="with-border">Testimonials</h2>
+							<div id="myCarousel" class="carousel slide section">
+								<div class="carousel-inner">
+									<div class="active item">
+										<div class="testimonials-block">
+											<article>
+												<blockquote>"Lorem ipsum dolor sit amet, nam idque tantas vidisse ex, per ea sint explicari theophrastus, dicat tantas copiosae eam id. Cum maiestatis necessitatibus ad, nam ut mutat quaestio. Id primis dolores eum. Munere sententiae vis ea. Pro dicta insolens eu, duo veniam eruditi oportere an, eum molestie salutandi in. Vix in elit legere appetere, pri in erant."</blockquote>
+												<b class="caret"></b>
+												<p class="author"><i class="icon-user"></i> Mani Coop, <span>Google</span></p>
+											</article>
+										</div>
+									</div>
+									<div class="item">
+										<div class="testimonials-block">
+											<article>
+												<blockquote>"Lorem ipsum dolor sit amet, nam idque tantas vidisse ex, per ea sint explicari theophrastus, dicat tantas copiosae eam id. Cum maiestatis necessitatibus ad, nam ut mutat quaestio. Id primis dolores eum. Munere sententiae vis ea. Pro dicta insolens eu, duo veniam eruditi oportere an, eum molestie salutandi in. Vix in elit legere appetere, pri in erant."</blockquote>
+												<b class="caret"></b>
+												<p class="author"><i class="icon-user"></i> Mani Coop, <span>Google</span></p>
+											</article>
+										</div>
+									</div>
+									<div class="item">
+										<div class="testimonials-block">
+											<article>
+												<blockquote>"Lorem ipsum dolor sit amet, nam idque tantas vidisse ex, per ea sint explicari theophrastus, dicat tantas copiosae eam id. Cum maiestatis necessitatibus ad, nam ut mutat quaestio. Id primis dolores eum. Munere sententiae vis ea. Pro dicta insolens eu, duo veniam eruditi oportere an, eum molestie salutandi in. Vix in elit legere appetere, pri in erant."</blockquote>
+												<b class="caret"></b>
+												<p class="author"><i class="icon-user"></i> Kate Saliman, <span>Company name</span></p>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+-->
+			
+		</section>
+		
+<!--
+		<div class="bottom-parallax small-view" style="background-image: url(images/bg1.jpg);">
+			<div class="black-bg">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span9">
+							<h3>Want to get started?</h3>
+							<h4>Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante.</h4>
+						</div>
+						<div class="span3">
+							<a class="btn btn-large" href="#">Contact us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+-->
+		
+		<footer>
+			<div class="light-bg">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span3">
+							<h4>Get in touch</h4>
+							<div class="info-block">
+								<article class="clearfix">
+									<i class="icon-globe"></i>
+									<address>
+										8430 University Executive Park Dr #650<br />
+										Charlotte, NC 28262	<br />
+									</address>
+								</article>
+<!--
+								<article class="clearfix">
+									<i class="icon-phone"></i>
+									<p>8 417 274 2933</p>
+								</article>
+-->
+								<article class="clearfix">	
+									<i class="icon-envelope"></i>
+									<p><a href="mailto:alancravey@gmail.com">AlanCravey@gmail.com</a></p>
+								</article>	
+							</div>	
+						</div>
+						<div class="span3">
+							<h4>Follow Me</h4>
+							<div class="social">
+								<ul class="unstyled clearfix">
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-github"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-linkedin"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-pinterest"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-google-plus"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-vk"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" title="" href="#">
+											<i class="icon-rss"></i>
+										</a>
+									</li>
+								</ul>
+							</div>	
+						</div>
+						<div class="span3">
+							<h4>Recent posts</h4>
+							<ul class="link-list">
+								<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+								<li><a href="#">Cum maiestatis necessitatibus ad</a></li>
+								<li><a href="#">Dicat tantas copiosae eam id</a></li>
+								<li><a href="#">Theophrastus, dicat tantas</a></li>
+								<li><a href="#">Cras metus elit, consectetur sed</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+							</ul>
+						</div>
+<!--
+						<div class="span3">
+							<h4>Photostream</h4>
+							<ul class="footer-thumbnails unstyled clearfix">
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+								<li class="stream">
+									<a href="#">
+										<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+-->
+					</div>
+				</div>	
+			</div>	
+			<div class="copyright-block dark-bg clearfix">
+				<div class="container">
+					<div class="pull-left">
+						<p class="pull-left">Copyright &copy; 2016 by Alan Cravey</p>
+					</div>	
+<!--
+					<div class="pull-right">
+						<p>Thanks <a href="http://www.unsplash.com" target="_blank">ooomf</a> for the pictures</p>
+					</div>	
+-->
+				</div>
+			</div>	
+		</footer>
+		<a class="goTop goTop-link"><i class="icon-angle-up"></i></a>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="~/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script src="~/js/bootstrap.min.js"></script>
+		<script src="~/js/plugins.js"></script>
+		<script src="~/js/jquery.colorbox-min.js"></script>
+		<script src="~/js/main.js"></script>
+	</body>
+</html>
+
