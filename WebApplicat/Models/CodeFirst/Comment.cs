@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using WebApplicat.Models;
+using WebApplicat.Models.CodeFirst;
 
-namespace WebApplicat.Models
+namespace WebApplicat.Models.CodeFirst
 {
     public class Comment
     {

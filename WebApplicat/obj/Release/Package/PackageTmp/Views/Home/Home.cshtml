@@ -48,15 +48,16 @@
 							<li class="active"><a href="@Url.Action("Home", "Home")">Home</a></li>
 							<li class="active"><a href="@Url.Action("Blog", "Home")">Blog</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages  <b class="caret"></b></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="price.html">Price</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="register.html">Register</a></li>
-									<li><a href="faq.html">F.A.Q.</a></li>
-									<li><a href="contacts.html">Contact</a></li>
-								</ul>
+							    <ul class="dropdown-menu" role="menu">
+							        <li><a href="about.html">About Us</a></li>
+							        <li><a href="services.html">Services</a></li>
+							        <li><a href="price.html">Price</a></li>
+							        <li><a href="login.html">Login</a></li>
+							        <li><a href="register.html">Register</a></li>
+							        <li><a href="faq.html">F.A.Q.</a></li>
+							        <li><a href="contacts.html">Contact</a></li>
+							    </ul>
+
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b>
 								<ul class="dropdown-menu" role="menu">
@@ -446,7 +447,8 @@
 		<script src="~/js/bootstrap.min.js"></script>
 		<script src="~/js/plugins.js"></script>
 		<script src="~/js/jquery.colorbox-min.js"></script>
-		<script src="~/js/main.js"></script>
+	    <script src="~/js/main.js"></script>
+        @*@RenderSection("Scripts", required: false)*@
 	</body>
 </html>
 

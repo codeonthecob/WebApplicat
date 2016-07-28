@@ -9,7 +9,6 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using WebApplicat.Models;
-using WebApplicat.Models;
 using WebApplicat.Providers;
 
 namespace WebApplicat

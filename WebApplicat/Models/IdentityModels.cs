@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using WebApplicat.Models;
+using WebApplicat.Models.CodeFirst;
 
 namespace WebApplicat.Models
 {
@@ -39,5 +41,6 @@ namespace WebApplicat.Models
         }
         public DbSet<BlogPost> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public IEnumerable ApplicationUsers { get; internal set; }
     }
 }
