@@ -6,9 +6,7 @@
 
 <h2>Index</h2>*@
 
-<p>
-    @Html.ActionLink("New", "Create")
-</p>
+
 @*<table class="table">
     <tr>
         <th>
@@ -294,34 +292,50 @@
 				</ul>
 			</div>
 		</div>
-		<div class="img-wrap">
+		@*<div class="img-wrap">
 			<a href="#">
 				<img src="~/images/bg4.jpg" alt=""/>
 			</a>
-		</div>
+		</div>*@
 	</div>
 
 
 </section>
+
+
+
+
+
+
+
+
+
+
+<p style="font-weight: bold">
+    @Html.ActionLink("Create New Post", "Create")
+</p>
 
 @*// BLOG POST START //*@
 
 
 @foreach (var item in Model)
 {
-	<section class="post">
-		<h3>@Html.DisplayFor(modelItem => item.Title)</h3>
-		<div class="info-panel clearfix">
-			<span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(modelItem => item.Created)</time></span>
-			<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-		</div>
-		<p>
-			@Html.DisplayFor(modelItem => item.Body)
-		</p>
-		<a class="btn pull-right" href="#">Read more</a>
+    <section class="post">
+        <h1>@Html.DisplayFor(modelItem => item.MediaURL)</h1><br/>
+        <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+        <div class="info-panel clearfix">
+            <span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(modelItem => item.Created)</time></span>
+            <span class="pull-right"><i class="icon-user"></i> By Alan Cravey </span>
+        </div>
+        <p>
+            @Html.DisplayFor(modelItem => item.Body)
+        </p>
+        <a class="btn pull-right" href="#">Read more</a>
 
-
-	</section>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+    </section>
 }
 
 

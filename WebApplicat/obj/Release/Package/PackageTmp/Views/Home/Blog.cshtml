@@ -1,19 +1,22 @@
 ﻿
+@model IEnumerable<WebApplicat.Models.CodeFirst.BlogPost>
+
 @{
-    Layout = null;
+	Layout = null;
 }
 
 <!DOCTYPE html>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Griny - single & multi page theme</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Griny - single & multi page theme</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="~/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="~/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="~/css/colorbox.css">
@@ -25,353 +28,309 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<script src="~/js/respond.min.js"></script>
 		<![endif]-->
-        <script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-		
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand goTop" href="#">Griny</a>
-					<div class="nav-collapse pull-right">
-					    <ul class="nav">
-					        <li><a href="@Url.Action("Home", "Home")">Home</a></li>
-					        <li class="active"><a href="@Url.Action("Blog", "Home")">Blog</a></li>
-					        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-					            <ul class="dropdown-menu" role="menu">
-					                <li><a href="about.html">About Us</a></li>
-					                <li><a href="services.html">Services</a></li>
-					                <li><a href="price.html">Price</a></li>
-					                <li><a href="login.html">Login</a></li>
-					                <li><a href="register.html">Register</a></li>
-					                <li><a href="faq.html">F.A.Q.</a></li>
-					                <li><a href="contacts.html">Contact</a></li>
-					            </ul>
 
-					        </li>
-					        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-					            <ul class="dropdown-menu" role="menu">
-					                <li><a href="blog-right.html">Blog right sidebar</a></li>
-					                <li class="active"><a href="blog-left.html">Blog left sidebar</a></li>
-					                <li><a href="blog-full.html">Blog full</a></li>
-					                <li class="divider"></li>
-					                <li><a href="blog-single.html">Blog single one</a></li>
-					                <li><a href="blog-single2.html">Blog single two</a></li>
-					            </ul>
-					        </li>
-					        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
-					            <ul class="dropdown-menu" role="menu">
-					                <li><a href="works.html">Simple gallery</a></li>
-					                <li><a href="works2.html">With text</a></li>
-					                <li><a href="works3.html">With filter</a></li>
-					                <li class="divider"></li>
-					                <li><a href="works-single.html">Single project</a></li>
-					            </ul>
-					        </li>
-					        <li><a href="shortcodes.html">Shortcodes</a>
-					        </li>
-					        <li>
-					            @Html.Partial("_LoginPartial")
-					        </li>
-                        </ul>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand goTop" href="#">Griny</a>
+			<div class="nav-collapse pull-right">
+				<ul class="nav">
+					<li><a href="@Url.Action("Home", "Home")">Home</a></li>
+					<li class="active"><a href="@Url.Action("Blog", "Home")">Blog</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="price.html">Price</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li><a href="register.html">Register</a></li>
+							<li><a href="faq.html">F.A.Q.</a></li>
+							<li><a href="contacts.html">Contact</a></li>
+						</ul>
 
-					</div>	
-				</div>	
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="blog-right.html">Blog right sidebar</a></li>
+							<li class="active"><a href="blog-left.html">Blog left sidebar</a></li>
+							<li><a href="blog-full.html">Blog full</a></li>
+							<li class="divider"></li>
+							<li><a href="blog-single.html">Blog single one</a></li>
+							<li><a href="blog-single2.html">Blog single two</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="works.html">Simple gallery</a></li>
+							<li><a href="works2.html">With text</a></li>
+							<li><a href="works3.html">With filter</a></li>
+							<li class="divider"></li>
+							<li><a href="works-single.html">Single project</a></li>
+						</ul>
+					</li>
+					<li><a href="shortcodes.html">Shortcodes</a>
+					</li>
+					<li>
+						@Html.Partial("_LoginPartial")
+					</li>
+				</ul>
+
 			</div>
 		</div>
-    <div class="parallax" style="background-image: url('../../images/bg1.jpg');">
-        <div class="text">
-            <h1>Blog</h1>
-            <p>Left sidebar</p>
-        </div>
-    </div>
-	<section class="text-block">
-			<div class="light-bg">
-				<div class="container">
-					<h2 class="with-border">Blog <small class="color">/ write something</small></h2>
-					<div class="row-fluid">
-						<div class="span3">
-							<form class="form">
-								<div class="controls controls-row search-row">
-									<input class="input-block-level" type="text" placeholder="Search">
-									<button class="btn" type="button"><i class="icon-search"></i></button>
-								</div>
-							</form>
-							<article>
-								<h4 class="with-border">Categories</h4>
-							    <ul class="unstyled link-list">
-							        <li class=""><a href="#"><i class="icon-chevron-right"></i> Design</a></li>
-							        <li class=""><a href="#"><i class="icon-chevron-right"></i> Development</a></li>
-							        <li class=""><a href="#"><i class="icon-chevron-right"></i> Usability</a></li>
-							        <li class=""><a href="#"><i class="icon-chevron-right"></i> Support</a></li>
-							        <li class=""><a href="#"><i class="icon-chevron-right"></i> Advertisement</a></li>
-							    </ul>
-
-							</article>	
-							<article class="section">
-								<h4 class="with-border">Tags</h4>
-								<ul class="unstyled">
-									<a href="#" class="tag btn btn-primary">Web</a>
-									<a href="#" class="tag btn btn-primary">Games</a>
-									<a href="#" class="tag btn btn-primary">Design</a>
-									<a href="#" class="tag btn btn-primary">3D</a>
-									<a href="#" class="tag btn btn-primary">jQuery</a>
-									<a href="#" class="tag btn btn-primary">C++</a>
-									<a href="#" class="tag btn btn-primary">Bootstrap</a>
-									<a href="#" class="tag btn btn-primary">Google</a>
-									<a href="#" class="tag btn btn-primary">JavaScript</a>
-								</ul>
-							</article>	
-							<article class="section">
-								<h4 class="with-border">Featured video</h4>
-								<div class="videoWrapper">
-									<iframe src="http://player.vimeo.com/video/20596477?color=39ae77" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								</div>
-							</article>	
-							<article class="section">
-								<h4 class="with-border">Popular Photos</h4>
-								<ul class="footer-thumbnails unstyled clearfix">
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-									<li class="stream">
-										<a href="#">
-											<img src="http://dummyimage.com/45x45/243135/fff" alt="">
-										</a>
-									</li>
-								</ul>
-							</article>	
-							<article class="section">
-								<h4 class="with-border">Recent Comments</h4>
-								<ul class="media-list">
-									<li class="media comments">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="~/images/team.jpg">
-										</a>
-										<div class="media-body">
-											<h5>
-												<a href="#">Rick</a>
-												in
-												<a href="#">Lorem ipsum dolor sit amet</a>
-											</h5>
-											<p>In ante dui, pharetra vestibulum massa vel, gravida commodo diam. Ut vulputate egestas odio ac blandit...</p>
-										</div>
-									</li>
-									<li class="media comments">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="~/images/team2.jpg">
-										</a>
-										<div class="media-body">
-											<h5>
-												<a href="#">Admin</a>
-												in
-												<a href="#">Aenean ac interdum ligula</a>
-											</h5>
-											<p>In varius eros nibh, sed euismod dolor congue vel. Sed auctor aliquet velit, gravida pharetra turpis fermentum ut...</p>
-										</div>
-									</li>
-									<li class="media comments">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="~/images/team3.jpg">
-										</a>
-										<div class="media-body">
-											<h5>
-												<a href="#">Andrew</a>
-												in
-												<a href="#">Nam mattis enim eu nibh facilisis sollicitudin</a>
-											</h5>
-											<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</p>
-										</div>
-									</li>
-								</ul>
-							</article>	
-							<article class="section">
-								<h4 class="with-border">Text Widget</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. </p>
-							</article>	
-						</div>
-						<div class="span9">
-							<ul class="thumbnails">
-								<li class="span12">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<a href="#"><img src="~/images/bg4.jpg" alt=""/></a>
-										</div>	
-										<h3>Lorem ipsum dolor sit amet</h3>
-										<div class="info-panel clearfix">
-											<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-											<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-										</div>	
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. Pellentesque diam ante, egestas at suscipit vel, aliquam sit amet massa</p>
-										<a class="btn pull-right" href="#">Read more</a>
-									</div>	
-								</li>
-								<div class="row">
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/image_1.jpg" alt=""/></a>
-											</div>	
-											<h3>Lorem ipsum dolor sit amet</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/image_2.jpg" alt=""/></a>
-											</div>
-											<h3>Cum maiestatis necessitatibus</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-								</div>	
-								<div class="row">
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/team3.jpg" alt=""/></a>
-											</div>
-											<h3>Dicat tantas copiosae eam id</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/image_4.jpg" alt=""/></a>
-											</div>
-											<h3>Theophrastus, dicat tantas</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-								</div>	
-								<div class="row">
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/image_5.jpg" alt=""/></a>
-											</div>	
-											<h3>Metus elit, consectetur sed</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-									<li class="span6">
-										<div class="thumbnail">
-											<div class="img-wrap">
-												<a href="#"><img src="~/images/image_6.jpg" alt=""/></a>
-											</div>
-											<h3>Lorem ipsum dolor sit amet</h3>
-											<div class="info-panel clearfix">
-												<span class="pull-left"><time datetime=""><i class="icon-calendar "></i> Sep 19, 2013</time></span>
-												<span class="pull-right"><i class="icon-user"></i> By Rick </span>
-											</div>	
-											<p>Pellentesque ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci quam eget ante.</p>
-											<a class="btn pull-right" href="#">Read more</a>
-										</div>	
-									</li>
-								</div>	
-							</ul>	
-							<div class="pagination pagination-right">
-								<ul>
-									<li class="disabled"><a href="#">Prev</a></li>
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">Next</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>	
-				</div>	
-			</div>	
-		</section>
-
-
-		<div class="bottom-parallax small-view" style="background-image: url(images/bg1.jpg);">
-			<div class="black-bg">
-				<div class="container">
-					<div class="row-fluid">
-						<div class="span9">
-							<h3>Want to get started?</h3>
-							<h4>Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante.</h4>
-						</div>
-						<div class="span3">
-							<a class="btn btn-large" href="#">Contact us</a>
-						</div>
+	</div>
+</div>
+<div class="parallax" style="background-image: url('../../images/bg1.jpg');">
+	<div class="text">
+		<h1>Blog</h1>
+		<p>Left sidebar</p>
+	</div>
+</div>
+<section class="text-block">
+	<div class="light-bg"/>
+	<div class="container">
+		<h2 class="with-border">Blog
+			<small class="color">/ write something</small>
+		</h2>
+		<div class="row-fluid">
+			<div class="span3">
+				<form class="form">
+					<div class="controls controls-row search-row">
+						<input class="input-block-level" type="text" placeholder="Search">
+						<button class="btn" type="button">
+							<i class="icon-search"></i>
+						</button>
 					</div>
+				</form>
+				<article>
+					<h4 class="with-border">Categories</h4>
+					<ul class="unstyled link-list">
+						<li class="">
+							<a href="#">
+								<i class="icon-chevron-right"></i> Design
+							</a>
+						</li>
+						<li class="">
+							<a href="#">
+								<i class="icon-chevron-right"></i> Development
+							</a>
+						</li>
+						<li class="">
+							<a href="#">
+								<i class="icon-chevron-right"></i> Usability
+							</a>
+						</li>
+						<li class="">
+							<a href="#">
+								<i class="icon-chevron-right"></i> Support
+							</a>
+						</li>
+						<li class="">
+							<a href="#">
+								<i class="icon-chevron-right"></i> Advertisement
+							</a>
+						</li>
+					</ul>
+				</article>
+				<article class="section">
+					<h4 class="with-border">Tags</h4>
+					<ul class="unstyled">
+						<li><a href="#" class="tag btn btn-primary">Web</a></li>
+						<li><a href="#" class="tag btn btn-primary">Games</a></li>
+						<li>><a href="#" class="tag btn btn-primary">Design</a></li>
+						<li>><a href="#" class="tag btn btn-primary">3D</a></li>
+						<li><a href="#" class="tag btn btn-primary">jQuery</a></li>
+						<li><a href="#" class="tag btn btn-primary">C++</a></li>
+						<li><a href="#" class="tag btn btn-primary">Bootstrap</a></li>
+						<li><a href="#" class="tag btn btn-primary">Google</a></li>
+						<li><a href="#" class="tag btn btn-primary">JavaScript</a></li>
+					</ul>
+				</article>
+				<article class="section">
+					<h4 class="with-border">Featured video</h4>
+					<div class="videoWrapper">
+						<iframe src="http://player.vimeo.com/video/20596477?color=39ae77" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</article>
+				<article class="section">
+					<h4 class="with-border">Popular Photos</h4>
+
+					<ul class="footer-thumbnails unstyled clearfix">
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+						<li class="stream">
+							<a href="#">
+								<img src="http://dummyimage.com/45x45/243135/fff" alt="">
+							</a>
+						</li>
+					</ul>
+				</article>
+				<article class="section">
+					<h4 class="with-border">Recent Comments</h4>
+					<ul class="media-list">
+						<li class="media comments">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="~/images/team.jpg">
+							</a>
+							<div class="media-body">
+								<h5>
+									<a href="#">Rick</a>
+									in
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h5>
+								<p>In ante dui, pharetra vestibulum massa vel, gravida commodo diam. Ut vulputate egestas odio ac blandit...</p>
+							</div>
+						</li>
+						<li class="media comments">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="~/images/team2.jpg">
+							</a>
+							<div class="media-body">
+								<h5>
+									<a href="#">Admin</a>
+									in
+									<a href="#">Aenean ac interdum ligula</a>
+								</h5>
+								<p>In varius eros nibh, sed euismod dolor congue vel. Sed auctor aliquet velit, gravida pharetra turpis fermentum ut...</p>
+							</div>
+						</li>
+						<li class="media comments">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="~/images/team3.jpg">
+							</a>
+							<div class="media-body">
+								<h5>
+									<a href="#">Andrew</a>
+									in
+									<a href="#">Nam mattis enim eu nibh facilisis sollicitudin</a>
+								</h5>
+								<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</p>
+							</div>
+						</li>
+					</ul>
+				</article>
+				<article class="section">
+					<h4 class="with-border">Text Widget</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum ligula. Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante. </p>
+				</article>
+			</div>
+			<div class="span9">
+				<ul class="thumbnails">
+					<li class="span12">
+					<div class="thumbnail">
+
+					</div>
+				</ul>
+			</div>
+		</div>
+		<div class="img-wrap">
+			<a href="#">
+				<img src="~/images/bg4.jpg" alt=""/>
+			</a>
+		</div>
+	</div>
+
+
+</section>
+
+@*// BLOG POST START //*@
+
+
+@foreach (var item in Model)
+{
+	<section class="post">
+		<h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+		<div class="info-panel clearfix">
+			<span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(modelItem => item.Created)</time></span>
+			<span class="pull-right"><i class="icon-user"></i> By Rick </span>
+		</div>
+		<p>
+			@Html.DisplayFor(modelItem => item.Body)
+		</p>
+		<a class="btn pull-right" href="#">Read more</a>
+
+
+	</section>
+}
+
+
+<div class="pagination pagination-right">
+	<ul>
+		<li class="disabled"><a href="#">Prev</a></li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">Next</a></li>
+	</ul>
+</div>
+
+
+
+
+
+<div class="bottom-parallax small-view" style="background-image: url(images/bg1.jpg);">
+	<div class="black-bg">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span9">
+					<h3>Want to get started?</h3>
+					<h4>Nullam iaculis dictum ullamcorper. In vitae pellentesque massa. Vivamus viverra libero dapibus, sodales lectus a, consectetur ante.</h4>
+				</div>
+				<div class="span3">
+					<a class="btn btn-large" href="#">Contact us</a>
 				</div>
 			</div>
 		</div>
-		
-		<footer>
+	</div>
+</div>
+
+
+<footer>
 			<div class="light-bg">
 				<div class="container">
 					<div class="row-fluid">
@@ -511,16 +470,17 @@
 						<p>Thanks <a href="http://www.unsplash.com" target="_blank">ooomf</a> for the pictures</p>
 					</div>	
 				</div>
-			</div>	
+			</div>
+		   
 		</footer>
 		<a class="goTop goTop-link"><i class="icon-angle-up"></i></a>
 		
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="~/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="~/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="~/js/bootstrap.min.js"></script>
-        <script src="~/js/plugins.js"></script>
+		<script src="~/js/plugins.js"></script>
 		<script src="~/js/placeholder.js"></script>
 		<script src="~/js/jquery.colorbox-min.js"></script>
-        <script src="~/js/main.js"></script>
-    </body>
+		<script src="~/js/main.js"></script>
+	
 </html>
