@@ -22,7 +22,8 @@ namespace WebApplicat.Controllers
         }
 
         // GET: BlogPosts/Details/5
-        public ActionResult Details(int? id)
+       
+         public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -61,6 +62,7 @@ namespace WebApplicat.Controllers
         }
 
         // GET: BlogPosts/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -92,6 +94,7 @@ namespace WebApplicat.Controllers
         }
 
         // GET: BlogPosts/Delete/5
+        [Authorize(Roles = "Mod")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

@@ -299,6 +299,26 @@
         @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
         @Html.ActionLink("Back to List", "Index")
 
+        @using (Html.BeginForm("CreateComment", "Comments", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+                       
+             <input type="hidden" name="PostId" value="@Model.Id"/>
+
+            
+             
+            <input type="text" name="Body"/>
+            <button type="submit">Submit Comment</button>
+
+        }
+
+	    @foreach (var item in Model.Comments)
+        {
+            @item.Created
+            @item.Body
+            <br/>
+        }
+
 
 	</section>
 

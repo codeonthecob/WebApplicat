@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using WebApplicat.Models;
 using WebApplicat.Models.CodeFirst;
 
@@ -38,29 +39,35 @@ namespace WebApplicat.Controllers
         }
 
         // GET: Comments/Create
-        public ActionResult Create()
-        {
-            ViewBag.AuthorId = new SelectList(db.ApplicationUsers, "Id", "FirstName");
-            ViewBag.PostId = new SelectList(db.Posts, "Id", "Title");
-            return View();
-        }
+        //public ActionResult Create(int? id)
+        //{
+        //    //ViewBag.AuthorId = new SelectList(db.ApplicationUsers, "Id", "FirstName");
+        //    //ViewBag.PostId = new SelectList(db.Posts, "Id", "Title");
+        //    ViewBag.PostId = id;
+        //    return View();
+        //}
 
         // POST: Comments/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,PostId,AuthorId,Body,Created,Updated,UpdateReason")] Comment comment)
+        public ActionResult CreateComment([Bind(Include = "PostId,Body")] Comment comment)
         {
             if (ModelState.IsValid)
             {
+                comment.Created = DateTimeOffset.Now;
+                comment.AuthorId = User.Identity.GetUserId();
                 db.Comments.Add(comment);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                var post = db.Posts.FirstOrDefault(p => p.Id == comment.PostId);
+
+                return RedirectToAction("Details", "BlogPosts", new {id = post.Id});
             }
 
-            ViewBag.AuthorId = new SelectList(db.ApplicationUsers, "Id", "FirstName", comment.AuthorId);
-            ViewBag.PostId = new SelectList(db.Posts, "Id", "Title", comment.PostId);
+            //ViewBag.AuthorId = new SelectList(db.ApplicationUsers, "Id", "FirstName", comment.AuthorId);
+            //ViewBag.PostId = new SelectList(db.Posts, "Id", "Title", comment.PostId);
             return View(comment);
         }
 

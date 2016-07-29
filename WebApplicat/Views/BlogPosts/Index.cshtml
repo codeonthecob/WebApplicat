@@ -1,73 +1,73 @@
 ﻿@model IEnumerable<WebApplicat.Models.CodeFirst.BlogPost>
 
 @*@{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>*@
 
 
 @*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Updated)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Slug)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Body)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MediaURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Published)
-        </th>
-        <th></th>
-    </tr>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Created)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Updated)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Title)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Content)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Slug)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Body)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.MediaURL)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Published)
+		</th>
+		<th></th>
+	</tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Updated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Slug)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Body)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MediaURL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Published)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+	<tr>
+		<td>
+			@Html.DisplayFor(modelItem => item.Created)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Updated)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Title)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Content)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Slug)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Body)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.MediaURL)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Published)
+		</td>
+		<td>
+			@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+			@Html.ActionLink("Details", "Details", new { id=item.Id }) |
+			@Html.ActionLink("Delete", "Delete", new { id=item.Id })
+		</td>
+	</tr>
 }
 
 </table>*@
@@ -312,7 +312,7 @@
 
 
 <p style="font-weight: bold">
-    @Html.ActionLink("Create New Post", "Create")
+	@Html.ActionLink("Create New Post", "Create")
 </p>
 
 @*// BLOG POST START //*@
@@ -320,22 +320,22 @@
 
 @foreach (var item in Model)
 {
-    <section class="post">
-        <h1>@Html.DisplayFor(modelItem => item.MediaURL)</h1><br/>
-        <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
-        <div class="info-panel clearfix">
-            <span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(modelItem => item.Created)</time></span>
-            <span class="pull-right"><i class="icon-user"></i> By Alan Cravey </span>
-        </div>
-        <p>
-            @Html.DisplayFor(modelItem => item.Body)
-        </p>
-        <a class="btn pull-right" href="#">Read more</a>
-
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-    </section>
+	<section class="post">
+		<h1>@Html.DisplayFor(modelItem => item.MediaURL)</h1><br/>
+		<h3><a href="@Url.Action("Details",new {id = item.Id})">@Html.DisplayFor(modelItem => item.Title)</a></h3>
+		<div class="info-panel clearfix">
+			<span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(modelItem => item.Created)</time></span>
+			<span class="pull-right"><i class="icon-user"></i> By Alan Cravey </span>
+		</div>
+		<p>
+			@Html.DisplayFor(modelItem => item.Body)
+		</p>
+		<a class="btn pull-right" href="#">Read more</a>
+		
+			@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+			 |
+			@Html.ActionLink("Delete", "Delete", new { id=item.Id })
+	</section>
 }
 
 
