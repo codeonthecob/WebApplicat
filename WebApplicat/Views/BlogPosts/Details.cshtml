@@ -296,7 +296,7 @@
 		</p>
 	    <a class="btn pull-right" href="#">Read more</a>
 
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         @Html.ActionLink("Back to List", "Index")
 
         @using (Html.BeginForm("CreateComment", "Comments", FormMethod.Post))
@@ -317,7 +317,14 @@
             @item.Created
             @item.Body
             <br/>
+            @Html.ActionLink("Edit", "Edit", "Comments", new { id = item.Id })
+            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            
+
         }
+
+        @Html.ActionLink("Manage Comments", "Index", "Comments");
 
 
 	</section>

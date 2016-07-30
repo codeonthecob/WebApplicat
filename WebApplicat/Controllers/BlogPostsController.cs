@@ -94,7 +94,7 @@ namespace WebApplicat.Controllers
         }
 
         // GET: BlogPosts/Delete/5
-        [Authorize(Roles = "Mod")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

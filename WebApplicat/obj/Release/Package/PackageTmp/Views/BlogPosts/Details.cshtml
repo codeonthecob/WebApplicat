@@ -289,15 +289,42 @@
 		<h3>@Html.DisplayFor(model => model.Title)</h3>
 		<div class="info-panel clearfix">
 			<span class="pull-left"><time datetime=""><i class="icon-calendar "></i>@Html.DisplayFor(model => model.Created)</time></span>
-			<span class="pull-right"><i class="icon-user"></i> By Alan </span>
+			<span class="pull-right"><i class="icon-user"></i> By Alan Cravey </span>
 		</div>
 		<p>
 			@Html.DisplayFor(model => model.Body)
 		</p>
 	    <a class="btn pull-right" href="#">Read more</a>
 
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         @Html.ActionLink("Back to List", "Index")
+
+        @using (Html.BeginForm("CreateComment", "Comments", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+                       
+             <input type="hidden" name="PostId" value="@Model.Id"/>
+
+            
+             
+            <input type="text" name="Body"/>
+            <button type="submit">Submit Comment</button>
+
+        }
+
+	    @foreach (var item in Model.Comments)
+        {
+            @item.Created
+            @item.Body
+            <br/>
+            @Html.ActionLink("Edit", "Edit", "Comments", new { id = item.Id })
+            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            
+
+        }
+
+        @Html.ActionLink("Manage Comments", "Index", "Comments");
 
 
 	</section>
