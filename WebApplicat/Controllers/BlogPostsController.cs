@@ -62,12 +62,17 @@ namespace WebApplicat.Controllers
             int pageSize = 5;
             int pageNumber = page ?? 1;
 
-            var listPosts = db.Posts.AsQueryable();
+            if (string.IsNullOrWhiteSpace(searchStr))
+            {
+                return View(db.Posts.OrderByDescending(p => p.Created).ToPagedList(pageNumber, pageSize));/*this is where to order the appearence of blog entries in order*/
+            }
+
+            //var listPosts = db.Posts.AsQueryable();
 
 
-            IList<BlogPost> plist = listPosts.ToList();
+            //IList<BlogPost> plist = listPosts.ToList();
 
-            return View(listPosts.OrderByDescending(p => p.Created).ToPagedList(pageNumber, pageSize));
+            return View(result.OrderByDescending(p => p.Created).ToPagedList(pageNumber, pageSize));
 
         }
 

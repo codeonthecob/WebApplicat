@@ -33,16 +33,14 @@
 
                         @using (Html.BeginForm())
 {
-    using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
-            {
+    using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new {enctype = "Multipart/form-data"}))
+    {
 
-                <input class="input-block-level" type="text" name="searchStr" value="Search" placeholder="Search">
-                <button class="btn" type="button">
-                    <i class="icon-search"></i>
-                </button>
-                    }
+        <input type="text"  name="searchStr" class="form-control">
+               <input type="submit" value="Search Blogs" class="" />
+    }
 
-        }
+}
 
                     </li>
 
@@ -312,16 +310,7 @@
                     </div>
                 </div>	
             </div>	
-            <div class="copyright-block dark-bg clearfix">
-                <div class="container">
-                    <div class="pull-left">
-                        <p class="pull-left">Copyright &copy; 2013 by <a href="http://www.frosenka.ru" target="_blank">frosenka</a>. All Rights Reserved</p>
-                    </div>	
-                    <div class="pull-right">
-                        <p>Thanks <a href="http://www.unsplash.com" target="_blank">ooomf</a> for the pictures</p>
-                    </div>	
-                </div>
-            </div>
+            
            
         </footer>
         <a class="goTop goTop-link"><i class="icon-angle-up"></i></a>
