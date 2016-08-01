@@ -87,4 +87,8 @@ C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\
 C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\System.Web.WebPages.Razor.xml
 C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\obj\Debug\WebApplicat.dll
 C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\obj\Debug\WebApplicat.pdb
+C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\PagedList.dll
+C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\PagedList.Mvc.dll
+C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\PagedList.xml
+C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\bin\PagedList.Mvc.xml
 C:\Users\alan\Documents\Visual Studio 2015\Projects\WebApplicat\WebApplicat\obj\Debug\WebApplicat.csprojResolveAssemblyReference.cache

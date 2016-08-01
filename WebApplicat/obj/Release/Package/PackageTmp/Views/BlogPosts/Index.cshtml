@@ -1,4 +1,17 @@
-﻿@model IEnumerable<WebApplicat.Models.CodeFirst.BlogPost>
+﻿
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css">
+
+
+@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<WebApplicat.Models.CodeFirst.BlogPost>
+
+
+
+
+
 
 @*@{
 	ViewBag.Title = "Index";
@@ -338,6 +351,9 @@
 	</section>
 }
 
+
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 
 <div class="pagination pagination-right">
 	<ul>

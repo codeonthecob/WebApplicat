@@ -83,7 +83,7 @@ namespace WebApplicat.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AuthorId = new SelectList(db.ApplicationUsers, "Id", "FirstName", comment.AuthorId);
+            ViewBag.AuthorId = new SelectList(db.Users, "FirstName", comment.AuthorId); //ApplicationUsers
             ViewBag.PostId = new SelectList(db.Posts, "Id", "Title", comment.PostId);
             return View(comment);
         }
@@ -93,7 +93,7 @@ namespace WebApplicat.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,PostId,AuthorId,Body,Created,Updated,UpdateReason")] Comment comment)
+        public ActionResult Edit([Bind(Include = "Id, PostId, Body")] Comment comment)
         {
             if (ModelState.IsValid)
             {

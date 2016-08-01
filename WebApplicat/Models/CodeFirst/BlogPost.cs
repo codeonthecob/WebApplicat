@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
@@ -17,7 +18,7 @@ namespace WebApplicat.Models.CodeFirst
 
         [Required]
         public string Title { get; set; }
-        [Required]
+        
         [AllowHtml]
         public string Content { get; set; }
         public string Slug { get; set; }
@@ -26,5 +27,6 @@ namespace WebApplicat.Models.CodeFirst
         public string MediaURL { get; set; }
         public bool Published { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿@model WebApplicat.Models.CodeFirst.BlogPost
-
+@using WebApplicat.Models.CodeFirst
 @{
     ViewBag.Title = "Details";
 }
@@ -7,6 +7,7 @@
 
 
 <!DOCTYPE html>
+
 
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -319,7 +320,11 @@
             <br/>
             @Html.ActionLink("Edit", "Edit", "Comments", new { id = item.Id })
             @Html.ActionLink("Back to List", "Index")
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @*@Html.ActionLink("Delete", "Comments", new { id=item.Id })*@
+            
+            <a class="btn btn-readmore" href='@Url.Action("Edit", "Comments", new { id = item.Id })'>Edit Comment</a>
+
+
             
 
         }
@@ -328,6 +333,9 @@
 
 
 	</section>
+
+
+    
 
 
 
