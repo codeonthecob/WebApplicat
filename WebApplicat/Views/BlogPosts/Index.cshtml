@@ -5,6 +5,10 @@
 @using PagedList;
 @using PagedList.Mvc;
 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 
 
 
@@ -17,12 +21,12 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            @*<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </a>
-            <a class="brand goTop" href="#">Griny</a>
+            </a>*@
+            <a class="brand goTop" href="#">Alan</a>
             <div class="nav-collapse pull-right">
                 <ul class="nav">
                     <li><a href="@Url.Action("Home", "Home")">Home</a></li>
@@ -31,16 +35,7 @@
                     <li>
                         @Html.Partial("_LoginPartial")
 
-                        @using (Html.BeginForm())
-{
-    using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new {enctype = "Multipart/form-data"}))
-    {
-
-        <input type="text"  name="searchStr" class="form-control">
-               <input type="submit" value="Search Blogs" class="" />
-    }
-
-}
+                       
 
                     </li>
 
@@ -53,38 +48,37 @@
 
     </div>
 </div>
-<div class="parallax" style="background-image: url('../../images/bg1.jpg');">
+@*<div class="parallax" @*style="background-image: url('../../images/bg1.jpg');">*@
     <div class="text">
-        <h1>Blog</h1>
-        <p>Left sidebar</p>
+        <h1></h1>
+        <p></p>
     </div>
-</div>
+
 <section class="text-block">
     <div class="light-bg"/>
     <div class="container">
         <h2 class="with-border">Blog
-            <small class="color">/ write something</small>
+            <small class="color"></small>
         </h2>
         <div class="row-fluid">
             <div class="span3">
                 <form class="form">
                     <div class="controls controls-row search-row">
-                        <input class="input-block-level" name="searchStr" type="text" placeholder="Search">
-                        <button class="btn" type="button">
-                            <i class="icon-search"></i>
-                        </button>
+                         @using (Html.BeginForm())
+{
+    using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new {enctype = "Multipart/form-data"}))
+    {
+
+        <input type="text" placeholder="Search for something..." name="searchStr" class="input-block-level">
+               <input type="submit" value="        GO!" style="background-color: teal; color: white; align-content: center; font-weight: bold;" class="" />
+    }
+
+}
                     </div>
                 </form>
                 
             </div>
-            <div class="span9">
-                <ul class="thumbnails">
-                    <li class="span12">
-                    <div class="thumbnail">
-
-                    </div>
-                </ul>
-            </div>
+            
         </div>
     </div>
 
@@ -119,7 +113,7 @@
         <p>
             @Html.DisplayFor(modelItem => item.Body)
         </p>
-        <a class="btn pull-right" href="#">Read more</a>
+        @*<a class="btn pull-right" href="#">Read more</a>*@
         
             @Html.ActionLink("Edit", "Edit", "Comments") |
              |
@@ -133,186 +127,13 @@
 
 
 
-<article class="section">
-                    <h4 class="with-border">Recent Comments</h4>
-                    <ul class="media-list">
-                        <li class="media comments">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/images/team.jpg">
-                            </a>
-                            <div class="media-body">
-                                <h5>
-                                    <a href="#">Rick</a>
-                                    in
-                                    <a href="#">Lorem ipsum dolor sit amet</a>
-                                </h5>
-                                <p>In ante dui, pharetra vestibulum massa vel, gravida commodo diam. Ut vulputate egestas odio ac blandit...</p>
-                            </div>
-                        </li>
-                        <li class="media comments">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/images/team2.jpg">
-                            </a>
-                            <div class="media-body">
-                                <h5>
-                                    <a href="#">Admin</a>
-                                    in
-                                    <a href="#">Aenean ac interdum ligula</a>
-                                </h5>
-                                <p>In varius eros nibh, sed euismod dolor congue vel. Sed auctor aliquet velit, gravida pharetra turpis fermentum ut...</p>
-                            </div>
-                        </li>
-                        <li class="media comments">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/images/team3.jpg">
-                            </a>
-                            <div class="media-body">
-                                <h5>
-                                    <a href="#">Andrew</a>
-                                    in
-                                    <a href="#">Nam mattis enim eu nibh facilisis sollicitudin</a>
-                                </h5>
-                                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</p>
-                            </div>
-                        </li>
-                    </ul>
-                </article>
 
 
-<footer>
-            <div class="light-bg">
-                <div class="container">
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <h4>Get in touch</h4>
-                            <div class="info-block">
-                                <article class="clearfix">
-                                    <i class="icon-globe"></i>
-                                    <address>
-                                        2425 West Boli Blvd. Suite 421.<br/>
-                                        City, Merils. United States,<br/>
-                                        Zip Code, 123456.	
-                                    </address>
-                                </article>
-                                <article class="clearfix">
-                                    <i class="icon-phone"></i>
-                                    <p>8 417 274 2933</p>
-                                </article>
-                                <article class="clearfix">	
-                                    <i class="icon-envelope"></i>
-                                    <p><a href="mailto:bootstrap@twitter.com">bootstrap@twitter.com</a></p>
-                                </article>	
-                            </div>	
-                        </div>
-                        <div class="span3">
-                            <h4>Follow us</h4>
-                            <div class="social">
-                                <ul class="unstyled clearfix">
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-github"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-vk"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" title="" href="#">
-                                            <i class="icon-rss"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>	
-                        </div>
-                        <div class="span3">
-                            <h4>Recent posts</h4>
-                            <ul class="link-list">
-                                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                <li><a href="#">Cum maiestatis necessitatibus ad</a></li>
-                                <li><a href="#">Dicat tantas copiosae eam id</a></li>
-                                <li><a href="#">Theophrastus, dicat tantas</a></li>
-                                <li><a href="#">Cras metus elit, consectetur sed</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                            </ul>
-                        </div>
-                        <div class="span3">
-                            <h4>Photostream</h4>
-                            <ul class="footer-thumbnails unstyled clearfix">
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                                <li class="stream">
-                                    <a href="#">
-                                        <img src="http://dummyimage.com/45x45/243135/fff" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>	
-            </div>	
+
+	
             
            
-        </footer>
+        
         <a class="goTop goTop-link"><i class="icon-angle-up"></i></a>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -95,6 +95,7 @@ namespace WebApplicat.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "Id,Created,Updated,Title,Content,Slug,Body,MediaURL,Published")] BlogPost blogPost)
         {
             if (ModelState.IsValid)
